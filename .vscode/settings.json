@@ -1,0 +1,29 @@
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 4,
+    "editor.fastScrollSensitivity": 4,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 10000,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "psi-header.config": {
+		"forceToTop": true,
+		"license": "Custom",
+		"license-text": "GNU General Public License v3.0",
+		"author": "gye hyun james kim",
+		"authorEmail": "pnuskgh@gmail.com",
+	},
+	"psi-header.license-text": ["GNU General Public License v3.0"],
+	"psi-header.templates": [
+		{
+			"language": "*",
+			"template": [
+				"<<relativepath>>/<<filename>>",
+				"",
+				"@version <<projectversion>>",
+				"@license <<licensetext>>",
+				"@author <<author>> <<<authoremail>>>"
+			]
+		}
+	],
+}
