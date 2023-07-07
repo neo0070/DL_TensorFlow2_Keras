@@ -1,6 +1,11 @@
 # Install
 
-## MacBook M2 Pro: Ventura 13.4.1
+## MacBook
+
+- MacBook Pro 13
+- Apple M2
+- 16 GB Memory, 500 GB storage
+- macOS Ventura 13.4.1
 
 ```bash
 python  --version                       #--- 3.10.6
