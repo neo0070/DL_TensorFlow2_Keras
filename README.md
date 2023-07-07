@@ -24,9 +24,9 @@ Deep Learning with TensorFlow 2 and Keras, 2nd Edition: Regression, ConvNets, GA
 - laboratory/: 개인별 연구 공간
   - pnuskgh: 김계현
   - neo0070: 임창현
-  - 박진
-  - 발걸음
-  - 채종호
+  - naver: 박진
+  - skc: 발걸음
+  - sds: 채종호
 
 ## 개발 환경
 
