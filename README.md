@@ -30,8 +30,7 @@ Deep Learning with TensorFlow 2 and Keras, 2nd Edition: Regression, ConvNets, GA
 
 ## 개발 환경
 
-- Reserved
-  ​
+- Python 3.10.6​
 
 ### 커뮤니케이션
 
@@ -43,6 +42,7 @@ Deep Learning with TensorFlow 2 and Keras, 2nd Edition: Regression, ConvNets, GA
 
 - ESLint 사용
 - Prettier 사용
+- [Python Code Convention](https://scshim.tistory.com/609)
 
 ​
 
@@ -80,3 +80,11 @@ Deep Learning with TensorFlow 2 and Keras, 2nd Edition: Regression, ConvNets, GA
 - [2030년에는 컴퓨터와 사람의 뇌가 합쳐질 겁니다 | 레이 커즈와일](https://youtu.be/uc66zrI28UY)
 - [테슬라 자율주행의 설계자 안드레 카파시](https://youtu.be/ay8E_moegfk)
 - [OpenAI 샘 알트만 | 인공지능 chatGPT는 균형을 잡아갈 것](https://youtu.be/vZ8J36xrK3s)
+- [PDF File](https://download.packt.com/free-ebook/9781838823412)
+- [Datasets](https://github.com/tensorflow/datasets)
+- [Deep-Learning-with-TensorFlow-2-and-Keras](https://github.com/PacktPublishing/Deep-Learning-with-TensorFlow-2-and-keras)
+- [Models](https://www.tensorflow.org/api_docs/python/tf/keras/models)
+- [Activation Functions](https://www.tensorflow.org/api_docs/python/tf/keras/activations)
+- [Loss Functions](https://www.tensorflow.org/api_docs/python/tf/keras/losses)
+- [Optimizers](https://www.tensorflow.org/api_docs/python/tf/keras/optimizers)
+- [Metrics](https://www.tensorflow.org/api_docs/python/tf/keras/metrics)
