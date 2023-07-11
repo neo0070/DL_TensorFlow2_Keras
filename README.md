@@ -88,3 +88,5 @@ Deep Learning with TensorFlow 2 and Keras, 2nd Edition: Regression, ConvNets, GA
 - [Loss Functions](https://www.tensorflow.org/api_docs/python/tf/keras/losses)
 - [Optimizers](https://www.tensorflow.org/api_docs/python/tf/keras/optimizers)
 - [Metrics](https://www.tensorflow.org/api_docs/python/tf/keras/metrics)
+- CNN
+  - [합성곱 신경망](https://www.tensorflow.org/tutorials/images/cnn?hl=ko)
