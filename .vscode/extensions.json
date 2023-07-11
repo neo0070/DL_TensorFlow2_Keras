@@ -1,10 +1,5 @@
 {
   "recommendations": [
     "ms-python.python",
-    "ms-python.pylint",
-    "magicstack.magicpython",
-    "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode",
-    "psioniq.psi-header"
   ]
 }
