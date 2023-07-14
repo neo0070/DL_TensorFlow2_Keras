@@ -44,7 +44,10 @@ Deep Learning with TensorFlow 2 and Keras, 2nd Edition: Regression, ConvNets, GA
 - Prettier 사용
 - [Python Code Convention](https://scshim.tistory.com/609)
 
-​
+### 교재 Source Code와 교재 내 이미지
+
+- Source https://github.com/PacktPublishing/Deep-Learning-with-TensorFlow-2-and-Keras​
+- 이미지 https://static.packt-cdn.com/downloads/9781838823412_ColorImages.pdf
 
 ### Git Convention
 
