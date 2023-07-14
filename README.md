@@ -44,11 +44,6 @@ Deep Learning with TensorFlow 2 and Keras, 2nd Edition: Regression, ConvNets, GA
 - Prettier 사용
 - [Python Code Convention](https://scshim.tistory.com/609)
 
-### 교재 Source Code와 교재 내 이미지
-
-- Source https://github.com/PacktPublishing/Deep-Learning-with-TensorFlow-2-and-keras​
-- 이미지 https://static.packt-cdn.com/downloads/9781838823412_ColorImages.pdf
-
 ### Git Convention
 
 - 형상 관리를 위한 branch 전략
@@ -86,6 +81,7 @@ Deep Learning with TensorFlow 2 and Keras, 2nd Edition: Regression, ConvNets, GA
 - [PDF File](https://download.packt.com/free-ebook/9781838823412)
 - [Datasets](https://github.com/tensorflow/datasets)
 - [Deep-Learning-with-TensorFlow-2-and-Keras](https://github.com/PacktPublishing/Deep-Learning-with-TensorFlow-2-and-keras)
+  - [이미지](https://static.packt-cdn.com/downloads/9781838823412_ColorImages.pdf)
 - [Models](https://www.tensorflow.org/api_docs/python/tf/keras/models)
 - [Activation Functions](https://www.tensorflow.org/api_docs/python/tf/keras/activations)
 - [Loss Functions](https://www.tensorflow.org/api_docs/python/tf/keras/losses)
