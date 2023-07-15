@@ -90,4 +90,3 @@ Deep Learning with TensorFlow 2 and Keras, 2nd Edition: Regression, ConvNets, GA
 - CNN
   - [합성곱 신경망](https://www.tensorflow.org/tutorials/images/cnn?hl=ko)
 - [Son's Notation ㅣ LECTURE NOTE, 머신러닝/딥러닝](https://sonsnotation.blogspot.com/)
-- 
