@@ -80,6 +80,9 @@ Deep Learning with TensorFlow 2 and Keras, 2nd Edition: Regression, ConvNets, GA
 - [OpenAI 샘 알트만 | 인공지능 chatGPT는 균형을 잡아갈 것](https://youtu.be/vZ8J36xrK3s)
 - [교재 영문 ebook | PDF File](https://download.packt.com/free-ebook/9781838823412)
 - [Datasets](https://github.com/tensorflow/datasets)
+- CNN
+  - [합성곱 신경망](https://www.tensorflow.org/tutorials/images/cnn?hl=ko)
+- [Son's Notation ㅣ LECTURE NOTE, 머신러닝/딥러닝](https://sonsnotation.blogspot.com/)
 - [교재 내 Source Code | Deep-Learning-with-TensorFlow-2-and-Keras](https://github.com/PacktPublishing/Deep-Learning-with-TensorFlow-2-and-keras)
   - [교재 내 이미지 | PDF](https://static.packt-cdn.com/downloads/9781838823412_ColorImages.pdf)
 - [Models](https://www.tensorflow.org/api_docs/python/tf/keras/models)
@@ -87,6 +90,3 @@ Deep Learning with TensorFlow 2 and Keras, 2nd Edition: Regression, ConvNets, GA
 - [Loss Functions](https://www.tensorflow.org/api_docs/python/tf/keras/losses)
 - [Optimizers](https://www.tensorflow.org/api_docs/python/tf/keras/optimizers)
 - [Metrics](https://www.tensorflow.org/api_docs/python/tf/keras/metrics)
-- CNN
-  - [합성곱 신경망](https://www.tensorflow.org/tutorials/images/cnn?hl=ko)
-- [Son's Notation ㅣ LECTURE NOTE, 머신러닝/딥러닝](https://sonsnotation.blogspot.com/)
