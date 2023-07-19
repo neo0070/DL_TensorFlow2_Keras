@@ -1,26 +1,29 @@
 """ 
     Deep Learning
 
-    @file laboratory/pnuskgh/mnist.py
+    @file laboratory/pnuskgh/mnist_cnn.py
     @version 0.0.1
     @license OBCon License 1.0
     @copyright pnuskgh, All right reserved.
     @author gye hyun james kim <pnuskgh@gmail.com>
 """
 
-#--- https://knowyourdata-tfds.withgoogle.com/#tab=STATS&dataset=mnist
-#--- conda  activate  py310
-#--- python  laboratory/pnuskgh/mnist_cnn.py
-
-import os
+from datetime import datetime
 import tensorflow as tf
 from tensorflow import keras
 
-class MNIST:
+from mnist_dense import MNIST_DENSE
+
+#--- python laboratory/pnuskgh/mnist_cnn.py
+class MNIST_CNN(MNIST_DENSE):
     def __init__(self):
-        os.environ["CUDA_VISIBLE_DEVICES"] = "0"                                #--- 0. 0번 GPU 사용, -1. GPU 사용하지 않음
+        super().__init__()
+
+        self.name = 'mnist_cnn'
         
     def initialize(self):
+        super().initialize();
+
         self.loss_function = 'categorical_crossentropy'
         self.optimizer = tf.keras.optimizers.Adam()
         self.metrics = 'accuracy'
@@ -49,49 +52,51 @@ class MNIST:
         return (x_train, y_train), (x_test, y_test)
 
     def build_model(self):
-        IMG_ROWS, IMG_COLS = 28, 28
-        input_shape = (IMG_ROWS, IMG_COLS, 1)
+        model = self.load_model()
+        if (model != None):
+            self.load_weights(model)
+        else:        
+            IMG_ROWS, IMG_COLS = 28, 28
+            input_shape = (IMG_ROWS, IMG_COLS, 1)
 
-        model = tf.keras.models.Sequential()                                    #--- 모델 : Sequential
-        model.add(keras.layers.Convolution2D(20, (5, 5), activation='relu', input_shape=input_shape))
-        model.add(keras.layers.MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
-        model.add(keras.layers.Convolution2D(50, (5, 5), activation='relu'))
-        model.add(keras.layers.MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
-        model.add(keras.layers.Flatten())
-        model.add(keras.layers.Dense(500, activation='relu'))
-        model.add(keras.layers.Dense(self.nb_classes, activation="softmax"))
+            model = tf.keras.models.Sequential()            #--- 모델 : Sequential
+            model.add(keras.layers.Conv2D(20, (5, 5), activation='relu', input_shape=input_shape))
+            model.add(keras.layers.BatchNormalization())
+            model.add(keras.layers.MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
+            # model.add(keras.layers.ZeroPadding2D(1, 1))
+            model.add(keras.layers.Dropout(self.dropout))
+
+            model.add(keras.layers.Conv2D(50, (5, 5), activation='relu'))
+            model.add(keras.layers.BatchNormalization())
+            model.add(keras.layers.MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
+            model.add(keras.layers.Dropout(self.dropout))
+
+            model.add(keras.layers.Flatten())
+            # model.add(keras.layers.Dense(500, activation='relu'))
+            model.add(keras.layers.Dense(self.nb_classes, activation="softmax"))
 
         model.compile(
-            optimizer=self.optimizer,                                           #--- Optimizer
-            loss=self.loss_function,                                            #--- Loss Function
-            metrics=[ self.metrics ],                                           #--- Matric
+            optimizer=self.optimizer,                       #--- Optimizer
+            loss=self.loss_function,                        #--- Loss Function
+            metrics=[ self.metrics ],                       #--- Matric
         )
         model.summary()
+        self.save_model(model)
         return model
-
-    def process_model(self, model, x_train, y_train, x_test, y_test):
-        callbacks = [
-            tf.keras.callbacks.TensorBoard(log_dir='../../logs')
-        ]
-
-        verbose = 1
-        history = model.fit(x_train, y_train,                                   #--- 학습
-            batch_size=self.batch_size, epochs=self.epochs,
-            verbose=verbose,
-            validation_split=self.validation_split,
-            callbacks=callbacks
-        )
-
-        test_loss, test_acc = model.evaluate(x_test, y_test)                    #--- 평가
-        print("Test accuracy:", test_acc)
-
-        predictions = model.predict(x_test)                                     #--- 예측
-        print("Predictions:", predictions)
+    
+    # def process_model(self, model, x_train, y_train, x_test, y_test):
+    #     super().process_model(self, model, x_train, y_train, x_test, y_test)
 
 if __name__ == "__main__":
-    deep_learning = MNIST()
+    datetimeFr = datetime.now()
+    deep_learning = MNIST_CNN()
     deep_learning.initialize()
     
     (x_train, y_train), (x_test, y_test) = deep_learning.load_data()
     model = deep_learning.build_model()
     deep_learning.process_model(model, x_train, y_train, x_test, y_test)
+
+    print(' ')
+    print(datetimeFr.strftime("%Y-%m-%d %H:%M:%S"))
+    print(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+    deep_learning.run_tensorboard()

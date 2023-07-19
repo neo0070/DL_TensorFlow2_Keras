@@ -4,15 +4,15 @@
 .local-chromium
 .babelrc
 *.swp
+*.pyc
 ~*
 zz*
 
-__pycache__
+__pycache__/
 coverage/
 dist/
 install/
 library/
-logs/
 node_modules/
 sessions/
 package-lock.json
