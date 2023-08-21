@@ -8,8 +8,6 @@
     @author gye hyun james kim <pnuskgh@gmail.com>
 """
 
-from datetime import datetime
-import tensorflow as tf
 from tensorflow import keras
 
 from mnist_dense import MNIST_DENSE
@@ -25,7 +23,7 @@ class MNIST_CNN(MNIST_DENSE):
         mnist = keras.datasets.mnist
         (x_train, y_train), (x_test, y_test) = mnist.load_data()                #--- 60,000/10,000개 데이터 (28 * 28)
 
-        x_train = x_train.reshape(60000, 28, 28, 1).astype("float32")
+        x_train = x_train.reshape(60000, 28, 28, 1).astype("float32") 
         x_test = x_test.reshape(10000, 28, 28, 1).astype("float32")
 
         self.x_train = x_train / 255                                                          #--- Normalize
@@ -93,7 +91,7 @@ class MNIST_CNN(MNIST_DENSE):
         IMG_ROWS, IMG_COLS = 28, 28
         input_shape = (IMG_ROWS, IMG_COLS, 1)
 
-        model = keras.models.Sequential()               #--- 모델 : Sequential
+        model = keras.models.Sequential()
         model.add(keras.layers.Conv2D(20, (5, 5), activation='relu', input_shape=input_shape))
         model.add(keras.layers.MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
 
@@ -109,4 +107,4 @@ if __name__ == "__main__":
     appl = MNIST_CNN()
     appl.load_data()
     appl.build_model(keras.optimizers.Adam(), 'categorical_crossentropy', 'accuracy', 'page_187', False)
-    appl.process_model(5, 128, 1, 0.95, True)
+    appl.process_model(20, 128, 1, 0.95, False)
