@@ -111,6 +111,7 @@ Deep Learning with TensorFlow 2 and Keras, 2nd Edition: Regression, ConvNets, GA
 |  17  | 2023.11.10 금 | 임창현 | 내부 문서 review                          |
 |      | 2023.11.24 금 |        | 제3차 오프라인 모임 (Workshop)            |
 |  18  | 2023.12.18 월 |        |                                           |
+|      |               |        | 8장. 순환신경망                           |
 |      |               |        | 9장. 오토인코더                           |
 |      |               |        | 10장. 비지도학습                          |
 |      |               |        | 11장. 강화학습                            |
